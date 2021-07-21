@@ -43,6 +43,12 @@ li
   border-radius: 50%;
 }
 
+
+.vertical-line
+{
+  border-right: 2px solid grey;
+}
+
 /* Custom Styles Ends here  */
 
 /* Topbar starts here */
@@ -143,3 +149,17 @@ li
 }
 
 /* Footer ends here  */
+
+
+
+
+/* User All Posts Page Starts here */
+
+/* div.main-center-content.me-auto.col-lg-8 > div > div > div.post-title > a */
+.user-all-posts .user-post .post-title a
+{
+  color: var(--primary-color);
+}
+
+
+/* User All Posts Page ends here */
