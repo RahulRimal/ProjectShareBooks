@@ -47,7 +47,7 @@ li
 
 /* Topbar starts here */
 #top-bar {
-  background-color: var(--primary-color)
+  background-color: var(--primary-color);
   height: 35px;
   line-height: 35px;
 }
@@ -134,5 +134,12 @@ li
     color: var(--primary-color);
 }
 /* Footer top ends here  */
+
+.footer-bottom
+{
+    height: 50px;
+    line-height: 50px;
+    background-color: var(--primary-color);
+}
 
 /* Footer ends here  */
