@@ -1,33 +1,138 @@
-*{
-    padding: 0;
-    margin: 0;
+:root
+{
+    --primary-color: #f04b35;
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
 }
 
 /* Important Styling Starts here  */
 
-a
+body
 {
-    text-decoration: none;
+    background-color: #F3F5FA;
+}
+
+a {
+  text-decoration: none;
+}
+
+li
+{
+    list-style: none;
 }
 
 /* Important Styling ends here  */
-#top-bar
-{
-    background-color: #f04b35;
-    height: 35px;
-    line-height: 35px;
+
+/* Custom Styles Starts here  */
+
+.circle-avatar-icon {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
-
-
-#header
-{
-    background-color: #f04b35;
-}
-
 
 .circle-avatar {
-    vertical-align: middle;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-  }
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+/* Custom Styles Ends here  */
+
+/* Topbar starts here */
+#top-bar {
+  background-color: var(--primary-color)
+  height: 35px;
+  line-height: 35px;
+}
+
+/* Topbar ends here */
+
+/* Header Starts here  */
+
+#header {
+  background-color: var(--primary-color);
+}
+
+/* Header ends here  */
+
+/* legt sidebar starts here  */
+
+.left-sidebar
+{
+    border-radius: 4%;
+}
+
+.left-sidebar > div.user-profile-info
+{
+    background-image: linear-gradient(var(--primary-color) 50%, white 50%);
+}
+
+
+.left-sidebar> div > div > img
+{
+    border: 4px solid white;;
+}
+
+
+/* legt sidebar ends here  */
+
+
+/* Narrow Main content starts here  */
+
+/* Narrow Main content ends here  */
+
+
+
+/* Footer Starts here  */
+
+/* Footer Newsletter Starts Here */
+
+.footer-newsletter form
+{
+    position:relative;
+}
+
+
+#newsletter-input
+{
+    width: 90%;
+    border:none;
+    border-radius: 20px;
+    color: var(--primary-color)
+    
+}
+
+#newsletter-input:focus
+{
+    border: 2px solid var(--primary-color);
+    outline: none;
+}
+
+.footer-newsletter form > button
+{
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 0;
+    right: 5%;
+    border-radius: 35px;
+    height: 100%;
+}
+
+
+/* Footer Newsletter Ends Here */
+
+/* Footer top starts here  */
+.footer-widget ul li a
+{
+    color: var(--primary-color);
+}
+/* Footer top ends here  */
+
+/* Footer ends here  */
