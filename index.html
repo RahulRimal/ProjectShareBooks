@@ -59,6 +59,27 @@
 
                 </div>
 
+
+                <div class="user-profile d-flex d-md-none">
+                    <div class="nav-item dropdown d-flex align-items-center">
+                        <img class="nav-link circle-avatar p-1"
+                            src="https://cdn.pixabay.com/photo/2017/12/31/15/56/portrait-3052641_960_720.jpg" alt="">
+                        <a class="nav-link active dropdown-toggle d-flex align-items-center text-light p-0" href="#"
+                            id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Rahul
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">CSIT</a></li>
+                            <li><a class="dropdown-item" href="#">BCA</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">BIT</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -67,15 +88,26 @@
                 <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
                     <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Class 11</a>
+                            <a class="nav-link active d-flex flex-column align-items-center" href="#"> <i
+                                    class="fa fa-home" aria-hidden="true"></i>Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Class 12</a>
+                            <a class="nav-link d-flex flex-column align-items-center" href="#"> <i
+                                    class="fa fa-shopping-cart" aria-hidden="true"></i>My Store</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex flex-column align-items-center" href="#"> <i
+                                    class="fas fa-comment-dots"></i>Messages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex flex-column align-items-center" href="#"><i
+                                    class="fas fa-bolt"></i>Notifications</a>
+                        </li>
+
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Bachelors
+                            <a class="nav-link dropdown-toggle d-flex flex-column align-items-center" href="#"
+                                id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i
+                                    class="fas fa-book-open"></i>Classwise
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="#">CSIT</a></li>
@@ -86,23 +118,45 @@
                                 <li><a class="dropdown-item" href="#">BIT</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Masters</a>
-                        </li>
                     </ul>
                     <form class="form-inline d-flex d-md-none align-items-center my-2 my-lg-0">
-                        <input style="height: 40px;" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <input style="height: 40px;" class="form-control mr-sm-2" type="search" placeholder="Search"
+                            aria-label="Search">
                         <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
                     </form>
                     <ul class="navbar-nav mb-2 mt-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">LogIn</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="btn btn-info">SignUp</a>
-                        </li>
-                    </ul>
+                        <div class="login-signup d-flex align-items-center">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">LogIn</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="btn btn-info">SignUp</a>
+                            </li>
+                        </div>
+                        <div class="user-profile d-none d-md-flex">
+                            <div class="nav-item dropdown d-flex align-items-center">
+                                <img class="nav-link circle-avatar p-1"
+                                    src="https://cdn.pixabay.com/photo/2017/12/31/15/56/portrait-3052641_960_720.jpg"
+                                    alt="">
+                                <a class="nav-link active dropdown-toggle d-flex align-items-center p-0" href="#"
+                                    id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">Rahul
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">CSIT</a></li>
+                                    <li><a class="dropdown-item" href="#">BCA</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">BIT</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
                 </div>
+
+                </ul>
+            </div>
             </div>
         </nav>
     </header>
@@ -139,9 +193,19 @@
 
 
 
+
+
+    <!-- Custom Js -->
+
+    <script src="js/script.js"></script>
+
     <!-- Bootstrap Js -->
     <script src="js/boot/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/26d4a64054.js"></script>
 </body>
 
 </html>
+
+
+
+<!-- https://cdn.pixabay.com/photo/2017/12/31/15/56/portrait-3052641_960_720.jpg -->

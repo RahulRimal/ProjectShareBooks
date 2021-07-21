@@ -3,6 +3,14 @@
     margin: 0;
 }
 
+/* Important Styling Starts here  */
+
+a
+{
+    text-decoration: none;
+}
+
+/* Important Styling ends here  */
 #top-bar
 {
     background-color: #f04b35;
@@ -15,3 +23,11 @@
 {
     background-color: #f04b35;
 }
+
+
+.circle-avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
