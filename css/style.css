@@ -18,6 +18,11 @@ body
 
 a {
   text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 li
@@ -43,10 +48,14 @@ li
   border-radius: 50%;
 }
 
-
 .vertical-line
 {
   border-right: 2px solid grey;
+}
+
+.sidebar-item:hover, .sidebar-item a:hover
+{
+  color: var(--primary-color);
 }
 
 /* Custom Styles Ends here  */
@@ -70,7 +79,7 @@ li
 
 /* legt sidebar starts here  */
 
-.left-sidebar
+.left-sidebar, .right-sidebar
 {
     border-radius: 4%;
 }
