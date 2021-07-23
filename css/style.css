@@ -13,7 +13,7 @@
 
 body
 {
-    background-color: #F3F5FA;
+    background-color: #F3F5FA!important;
 }
 
 a {
@@ -98,6 +98,8 @@ li
 
 /* Footer Starts here  */
 
+
+
 /* Footer Newsletter Starts Here */
 
 .footer-newsletter form
@@ -141,12 +143,19 @@ li
 }
 /* Footer top ends here  */
 
+/* Footer bottom starts here  */
+
 .footer-bottom
 {
-    /* height: 70px; */
     line-height: 30px;
     background-color: var(--primary-color);
 }
+
+/* Footer bottom ends here  */
+
+
+
+
 
 /* Footer ends here  */
 
@@ -163,3 +172,58 @@ li
 
 
 /* User All Posts Page ends here */
+
+
+/* Add post page Starts here  */
+
+.sell-buy-form-buttons-holder
+{
+  border: 2px solid var(--primary-color);
+  border-radius: 35px;
+}
+
+#sell-form-button, #buy-form-button
+{
+  cursor: pointer;
+  width: 125px;
+  height: 98%;
+  line-height: 215%;
+  border-radius: 35px;
+
+}
+
+.sell-buy-button-active
+{
+  background-color: var(--primary-color);
+}
+
+.sell-buy-button-inactive
+{
+  background-color: none;
+  /* border: 2px solid var(--primary-color); */
+}
+
+.add-post-input
+{
+  border: 2px solid var(--primary-color);
+    color: var(--primary-color)!important;
+}
+
+.add-post-input:focus
+{
+  border: 2px solid var(--primary-color);
+  outline: none;
+}
+
+
+
+.sell-book-post-pics img
+{
+  width: 150px;
+  height: 150px;
+  border: 2px solid var(--primary-color);
+  border-radius: 20px;
+  margin: 0 5px;
+}
+
+/* Add post page Starts here  */

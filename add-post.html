@@ -46,7 +46,6 @@
 
     <!-- Header starts here -->
 
-
     <header id="header" class="sticky-top">
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container d-flex justify-content-between">
@@ -203,320 +202,183 @@
         <!-- main wide content starts here  -->
 
         <div class="main-wide-content container-fluid">
+            <div class="user-add-post">
+                <div class="container">
+                    <div class="text-center bg-white p-4 mt-5 rounded">
+                        <div class="row add-post-heading mb-4">
+                            <div class="col text-center text-md-end p-0">
+                                <h3 id="sell-buy-form-title" class="text-center text-md-end">Sell Your Book</h3>
+                            </div>
+                            <div class="col d-flex justify-content-center justify-content-md-end text-end p-0">
+                                <div class="sell-buy-form-buttons-holder d-flex justify-content-around align-items-center">
+                                    <div id="sell-form-button" class="sell-buy-button-active text-center" onclick="showHideFormTabs(this)">
+                                        Sell Book
+                                    </div>
+                                    <div id="buy-form-button" class="sell-buy-button-inactive text-center" onclick="showHideFormTabs(this)">
+                                        Buy Book
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="add-post-body">
+                            <div class="sell-book-tab">
+                                <form id="addOnSaleForm" class="d-block">
+                                    <div class="form-group mb-3">
+                                        <input type="text" class="form-control add-post-input" id="sellingBookName"
+                                            aria-describedby="emailHelp" placeholder="Enter Book name">
+                                    </div>
 
+                                    <div class="row mb-3">
+                                        <div class="col-12 col-md-6 mb-3 mb-md-0">
+                                            <input type="text" class="form-control add-post-input"
+                                                placeholder="Author Name">
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <input type="date" class="form-control add-post-input htmlCalender"
+                                                placeholder="Bought Date">
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-md-6">
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend"
+                                                    style="border: 2px solid var(--primary-color);">
+                                                    <span class="input-group-text"
+                                                        style="background-color: var(--primary-color); color: white">Rs.</span>
+                                                </div>
+                                                <input type="number" class="form-control add-post-input"
+                                                    style="color: green!important;" placeholder="Price of a book"
+                                                    aria-label="Amount (to the nearest dollar)">
+                                                <div class="input-group-append"
+                                                    style="border: 2px solid var(--primary-color);">
+                                                    <span class="input-group-text"
+                                                        style="background-color: var(--primary-color); color: white">.00</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col">
+                                            <div class="col p-0 mb-3">
+                                                <input type="number" class="form-control add-post-input"
+                                                    placeholder="Quantity">
+                                            </div>
+                                        </div>
+
+                                        <div class="input-group mb-3">
+                                            <div class="custom-file">
+                                              <input type="file" class="custom-file-input" id="inputGroupFile02">
+                                              <!-- <input type="file" name="addPostPics" class="add-post-input"> -->
+                                              <label class="custom-file-label add-post-input" for="inputGroupFile02">Choose file</label>
+                                            </div>
+                                          </div>
+
+                                    </div>
+
+                                    <div class="sell-book-post-pics py-3" style="text-align: -webkit-center;">
+                                        <ul style="margin:0;padding:0;list-style:none;" id="sellBookPostPics" class="cs-hidden">
+                                            <li class="item-a" style="margin:0;padding:0;list-style:none;"><img src="assets/img/Share Your Learning.png" alt=""></li>
+                                            <li class="item-b" style="margin:0;padding:0;list-style:none;"><img src="https://cdn.pixabay.com/photo/2021/07/02/03/19/panpipe-6380762__340.jpg" alt=""></li>
+                                            <li class="item-c" style="margin:0;padding:0;list-style:none;"><img src="assets/img/Share Your Learning.png" alt=""></li>
+                                            <li class="item-d" style="margin:0;padding:0;list-style:none;"><img src="assets/img/Share Your Learning.png" alt=""></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="post-button text-end">
+                                        <button type="submit" class="btn btn-primary col-12 col-md-2 p-0 text-center w-100 w-md-25 font-weight-bold">Post</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="buy-book-tab">
+                                <form id="addBuyingForm" class="d-none">
+                                    <div class="form-group mb-3">
+                                        <input type="text" class="form-control add-post-input" id="sellingBookName"
+                                            aria-describedby="emailHelp" placeholder="Enter Book name">
+                                    </div>
+                                    
+                                        <input type="text" class="form-control add-post-input"
+                                            placeholder="Author Name">
+                                    
+
+                                    <div class="row mt-3">
+                                        <div class="col-12 col-md-6">
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend"
+                                                    style="border: 2px solid var(--primary-color);">
+                                                    <span class="input-group-text"
+                                                        style="background-color: var(--primary-color); color: white">Rs.</span>
+                                                </div>
+                                                <input type="number" class="form-control add-post-input"
+                                                    style="color: green!important;" placeholder="Price of a book"
+                                                    aria-label="Amount (to the nearest dollar)">
+                                                <div class="input-group-append"
+                                                    style="border: 2px solid var(--primary-color);">
+                                                    <span class="input-group-text"
+                                                        style="background-color: var(--primary-color); color: white">.00</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col">
+                                            <div class="col p-0 mb-3">
+                                                <input type="number" class="form-control add-post-input"
+                                                    placeholder="Quantity">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="post-button text-end">
+                                        <button type="submit" class="btn btn-primary col-12 col-md-2 p-0 text-center w-100 w-md-25 font-weight-bold">Post</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="add-post-footer">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- main wide content ends here  -->
 
         <!-- main narrow content starts here  -->
 
-        <div class="main-content container mt-5">
+        <div class="main-content container">
 
-            <div class="row flex-column-reverse flex-md-row">
-
-                <!-- Left sidebar starts here  -->
-
-                <!-- Left sidebar ends here  -->
-
-                <!-- main center content starts here  -->
-
-                <div class="main-center-content me-auto col-lg-8">
-                    <div class="user-all-posts">
-                        <!-- User post starts here  -->
-                        <div class="user-post bg-white p-2 mb-4 rounded">
-                            <div class="post-title-status d-flex justify-content-between">
-                                <div class="post-title">
-                                    <a href="#">
-                                        <h5>Fundamentals of Programming 2nd Edition</h5>
-                                    </a>
-                                </div>
-                                <div class="post-status">
-                                    <a href="#">
-                                        <h5 class="text-success">Available</h5>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="post-info-action d-flex justify-content-between align-items-center">
-                                <div class="post-info d-flex">
-                                    <div class="book-author me-5 text-center">
-                                        <p class="m-0"><i class="fa fa-user text-muted" aria-hidden="true"></i> Author
-                                        </p>
-                                        <h6 class="font-italic">Rahul Rimal</h6>
-                                    </div>
-                                    <div class="bought-time me-5 text-center">
-                                        <p class="m-0"><i class="fa fa-history text-muted" aria-hidden="true"></i>
-                                            Bought
-                                            Time
-                                        </p>
-                                        <h6 class="font-italic text-warning">1 Year ago</h6>
-                                    </div>
-                                    <div class="book-price me-5 text-center">
-                                        <p class="m-0"><i class="fas fa-coins text-muted" aria-hidden="true"></i> Price
-                                        </p>
-                                        <h6" class="font-italic text-success">Rs. 500</h6>
-                                    </div>
-                                </div>
-
-                                <div class="post-action me-5">
-                                    <div class="wishlist d-flex flex-column align-items-center">
-                                        <a href="#">
-                                            <i class="fa fa-shopping-basket" style="color: var(--primary-color);"
-                                                aria-hidden="true"></i>
-                                        </a>
-                                        <a href="#">
-                                            <p style="color: var(--primary-color);">Add to Wishlist</p>
-                                        </a>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="post-desc mt-4">
-                                <p class="text-truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Veritatis, nulla rem minima
-                                    debitis molestias necessitatibus quidem ipsa amet possimus, expedita eaque ab quia
-                                    aut error dolorum laborum repellat excepturi voluptate?</p>
-                            </div>
-                        </div>
-                        <!-- User post ends here  -->
-
-                        <!-- User post starts here  -->
-                        <div class="user-post bg-white p-2 mb-4 rounded">
-                            <div class="post-title-status d-flex justify-content-between">
-                                <div class="post-title">
-                                    <a href="#">
-                                        <h5>Fundamentals of Programming 2nd Edition</h5>
-                                    </a>
-                                </div>
-                                <div class="post-status">
-                                    <a href="#">
-                                        <h5 class="text-success">Available</h5>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="post-info-action d-flex justify-content-between align-items-center">
-                                <div class="post-info d-flex">
-                                    <div class="book-author me-5 text-center">
-                                        <p class="m-0"><i class="fa fa-user text-muted" aria-hidden="true"></i> Author
-                                        </p>
-                                        <h6 class="font-italic">Rahul Rimal</h6>
-                                    </div>
-                                    <div class="bought-time me-5 text-center">
-                                        <p class="m-0"><i class="fa fa-history text-muted" aria-hidden="true"></i>
-                                            Bought
-                                            Time
-                                        </p>
-                                        <h6 class="font-italic text-warning">1 Year ago</h6>
-                                    </div>
-                                    <div class="book-price me-5 text-center">
-                                        <p class="m-0"><i class="fas fa-coins text-muted" aria-hidden="true"></i> Price
-                                        </p>
-                                        <h6" class="font-italic text-success">Rs. 500</h6>
-                                    </div>
-                                </div>
-
-                                <div class="post-action me-5">
-                                    <div class="wishlist d-flex flex-column align-items-center">
-                                        <a href="#">
-                                            <i class="fa fa-shopping-basket" style="color: var(--primary-color);"
-                                                aria-hidden="true"></i>
-                                        </a>
-                                        <a href="#">
-                                            <p style="color: var(--primary-color);">Add to Wishlist</p>
-                                        </a>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="post-desc mt-4">
-                                <p class="text-truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Veritatis, nulla rem minima
-                                    debitis molestias necessitatibus quidem ipsa amet possimus, expedita eaque ab quia
-                                    aut error dolorum laborum repellat excepturi voluptate?</p>
-                            </div>
-                        </div>
-                        <!-- User post ends here  -->
-
-                        <!-- User post starts here  -->
-                        <div class="user-post bg-white p-2 mb-4 rounded">
-                            <div class="post-title-status d-flex justify-content-between">
-                                <div class="post-title">
-                                    <a href="#">
-                                        <h5>Fundamentals of Programming 2nd Edition</h5>
-                                    </a>
-                                </div>
-                                <div class="post-status">
-                                    <a href="#">
-                                        <h5 class="text-success">Available</h5>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="post-info-action d-flex justify-content-between align-items-center">
-                                <div class="post-info d-flex">
-                                    <div class="book-author me-5 text-center">
-                                        <p class="m-0"><i class="fa fa-user text-muted" aria-hidden="true"></i> Author
-                                        </p>
-                                        <h6 class="font-italic">Rahul Rimal</h6>
-                                    </div>
-                                    <div class="bought-time me-5 text-center">
-                                        <p class="m-0"><i class="fa fa-history text-muted" aria-hidden="true"></i>
-                                            Bought
-                                            Time
-                                        </p>
-                                        <h6 class="font-italic text-warning">1 Year ago</h6>
-                                    </div>
-                                    <div class="book-price me-5 text-center">
-                                        <p class="m-0"><i class="fas fa-coins text-muted" aria-hidden="true"></i> Price
-                                        </p>
-                                        <h6" class="font-italic text-success">Rs. 500</h6>
-                                    </div>
-                                </div>
-
-                                <div class="post-action me-5">
-                                    <div class="wishlist d-flex flex-column align-items-center">
-                                        <a href="#">
-                                            <i class="fa fa-shopping-basket" style="color: var(--primary-color);"
-                                                aria-hidden="true"></i>
-                                        </a>
-                                        <a href="#">
-                                            <p style="color: var(--primary-color);">Add to Wishlist</p>
-                                        </a>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="post-desc mt-4">
-                                <p class="text-truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Veritatis, nulla rem minima
-                                    debitis molestias necessitatibus quidem ipsa amet possimus, expedita eaque ab quia
-                                    aut error dolorum laborum repellat excepturi voluptate?</p>
-                            </div>
-                        </div>
-                        <!-- User post ends here  -->
-
-                        <!-- User post starts here  -->
-                        <div class="user-post bg-white p-2 mb-4 rounded">
-                            <div class="post-title-status d-flex justify-content-between">
-                                <div class="post-title">
-                                    <a href="#">
-                                        <h5>Fundamentals of Programming 2nd Edition</h5>
-                                    </a>
-                                </div>
-                                <div class="post-status">
-                                    <a href="#">
-                                        <h5 class="text-success">Available</h5>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="post-info-action d-flex justify-content-between align-items-center">
-                                <div class="post-info d-flex">
-                                    <div class="book-author me-5 text-center">
-                                        <p class="m-0"><i class="fa fa-user text-muted" aria-hidden="true"></i> Author
-                                        </p>
-                                        <h6 class="font-italic">Rahul Rimal</h6>
-                                    </div>
-                                    <div class="bought-time me-5 text-center">
-                                        <p class="m-0"><i class="fa fa-history text-muted" aria-hidden="true"></i>
-                                            Bought
-                                            Time
-                                        </p>
-                                        <h6 class="font-italic text-warning">1 Year ago</h6>
-                                    </div>
-                                    <div class="book-price me-5 text-center">
-                                        <p class="m-0"><i class="fas fa-coins text-muted" aria-hidden="true"></i> Price
-                                        </p>
-                                        <h6" class="font-italic text-success">Rs. 500</h6>
-                                    </div>
-                                </div>
-
-                                <div class="post-action me-5">
-                                    <div class="wishlist d-flex flex-column align-items-center">
-                                        <a href="#">
-                                            <i class="fa fa-shopping-basket" style="color: var(--primary-color);"
-                                                aria-hidden="true"></i>
-                                        </a>
-                                        <a href="#">
-                                            <p style="color: var(--primary-color);">Add to Wishlist</p>
-                                        </a>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="post-desc mt-4">
-                                <p class="text-truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Veritatis, nulla rem minima
-                                    debitis molestias necessitatibus quidem ipsa amet possimus, expedita eaque ab quia
-                                    aut error dolorum laborum repellat excepturi voluptate?</p>
-                            </div>
-                        </div>
-                        <!-- User post ends here  -->
-
-                    </div>
-                </div>
-
-                <!-- main center content ends here  -->
-
-
-                <!-- Right sidebar starts here  -->
-
-                <div class="right-sidebar col-lg-3 bg-white p-4 mb-5" style="max-height: 325px; border-radius: 35px;">
-                    <div class="sidebar-item">
-                        <div class="user-info d-flex justify-content-between align-items-center">
-                            <div class="user-profile-pic">
-                                <img class="circle-avatar"
-                                    src="https://cdn.pixabay.com/photo/2017/12/31/15/56/portrait-3052641_960_720.jpg"
-                                    alt="">
-                            </div>
-                            <div class="user-info">
-                                <h6 class="user-name"><em>Rahul Rimal</em></h6>
-                                <p class="user-desc">I am a GameDeveloper</p>
-                            </div>
-                        </div>
-                        <hr>
-                    </div>
-                    <div class="sidebar-item">
-                        <div class="user-followers-rating d-flex justify-content-between">
-                            <div class="user-followers-count d-flex flex-column text-center">
-                                <h6>Current Followers</h6>
-                                <h4 style="color: var(--primary-color);">200</h4>
-                            </div>
-                            <div class="vertical-line">
-
-                            </div>
-                            <div class="user-overall-rating">
-                                <div class="user-rating-count d-flex flex-column text-center">
-                                    <h6>Overall Rating</h6>
-                                    <h4 style="color: var(--primary-color);">4.5 <i style="color: goldenrod;"
-                                            class="fa fa-star" aria-hidden="true"></i></h4>
-                                </div>
-                            </div>
-                        </div>
-                        <hr>
-                    </div>
-                    <div class="sidebar-item">
-                        <div class="link-with-user d-flex justify-content-around">
-                            <div class="follow-user d-flex flex-column align-items-center">
-                                <i class="fa fa-user-plus" aria-hidden="true"></i>
-                                <p>Follow Rahul</p>
-                            </div>
-
-                            <div class="follow-user d-flex flex-column align-items-center">
-                                <i class="fab fa-facebook-messenger    "></i>
-                                <p>Message Rahul</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right sidebar ends here  -->
+            <!-- Left sidebar starts here  -->
+            <div class="left-sidebar">
 
             </div>
 
+            <!-- Left sidebar ends here  -->
+
+            <!-- main center content starts here  -->
+
+            <div class="main-center-content me-auto col-lg-6">
+
+            </div>
+
+            <!-- main center content ends here  -->
+
+
+            <!-- Right sidebar starts here  -->
+
+            <div class="right-sidebar col-lg-3">
+
+            </div>
+
+            <!-- Right sidebar ends here  -->
 
         </div>
 
         <!-- main narrow content ends here  -->
 
     </main>
+
+
 
     <!-- Footer starts here -->
 
@@ -666,12 +528,8 @@
     <!-- Footer ends here -->
 
 
-    <!-- Custom Js -->
 
-    <script src="js/script.js"></script>
 
-    <!-- LightSlider Js -->
-    <script src="js/lightslider.js"></script>
 
     <!-- Bootstrap Js -->
     <!-- <script src="js/boot/bootstrap.min.js"></script> -->
@@ -686,6 +544,13 @@
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/26d4a64054.js"></script>
+
+    <!-- Custom Js -->
+
+    <script src="js/script.js"></script>
+
+    <!-- LightSlider Js -->
+    <script src="js/lightslider.js"></script>
 
 </body>
 
