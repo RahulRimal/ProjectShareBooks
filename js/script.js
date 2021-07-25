@@ -134,3 +134,15 @@ $(document).ready(function () {
 });
 
 // LightSlider Section for add-post-pics ends here
+
+
+
+// Chatbox Starts here 
+
+function hideChatBox()
+{
+  chatBox = document.getElementById('chat-box');
+  chatBox.style.height = 0;
+}
+
+// Chatbox ends here

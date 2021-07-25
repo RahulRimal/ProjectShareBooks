@@ -1,6 +1,7 @@
 :root
 {
     --primary-color: #f04b35;
+    --primary-bg-color: #F3F5FA;
 }
 
 
@@ -13,7 +14,7 @@
 
 body
 {
-    background-color: #F3F5FA!important;
+    background-color: var(--primary-bg-color)!important;
 }
 
 a {
@@ -36,8 +37,8 @@ li
 
 .circle-avatar-icon {
   vertical-align: middle;
-  width: 50px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
 }
 
@@ -48,6 +49,31 @@ li
   border-radius: 50%;
 }
 
+.user-online-active
+{
+  background-color: #69DE40;
+  width: 10px;
+  height: 10px;
+  border-radius: 35px;
+}
+
+.active-now-text
+{
+  color: #69DE40;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.friend-message-text
+{
+  justify-content: flex-start;
+}
+
+.user-message-text
+{
+  justify-content: flex-end;
+}
+
 .vertical-line
 {
   border-right: 2px solid grey;
@@ -56,6 +82,51 @@ li
 .sidebar-item:hover, .sidebar-item a:hover
 {
   color: var(--primary-color);
+}
+
+
+#chat-box
+{
+  width: 30%;
+  height: 400px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+
+  position: fixed;
+  bottom: 0;
+  right: 5%;
+  z-index: 1030;
+  transition: height 0.8s;
+}
+
+@media(max-width: 768px)
+{
+  #chat-box
+  {
+    width: 100%;
+    right: 0;
+  }  
+}
+
+.chat-box-footer
+{
+  position: fixed;
+  bottom: 0;
+  width: 30%;
+}
+
+#chat-box-input
+{
+    width: 100%;
+    border: 2px solid var(--primary-color);
+    border-radius: 20px;
+    background-color: var(--primary-bg-color);
+    padding: 0 5px;
+}
+
+#chat-box-input:focus
+{
+  outline: none;
 }
 
 /* Custom Styles Ends here  */
