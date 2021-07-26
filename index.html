@@ -285,7 +285,7 @@
 
         <!-- main narrow content ends here  -->
 
-        <div id="chat-box" class="text-center bg-white">
+        <div id="chat-box" class="d-flex flex-column justify-content-between text-center bg-white">
             <div class="chat-box-heading p-2 mb-3"
                 style="background-color: var(--primary-color); border-top-left-radius: 25px; border-top-right-radius: 25px;">
                 <div class="row">
@@ -345,7 +345,7 @@
                 </div>
             </div>
 
-            <div class="chat-box-footer">
+            <div class="chat-box-footer mb-2">
                 <div class="chat-box-type-area">
                     <form action="post">
                         <div class="row m-0 justify-content-between">
@@ -359,6 +359,11 @@
                     </form>
                 </div>
             </div>
+        </div>
+
+        <div id="chat-head" class="d-block">
+            <img src="assets/img/Share Your Learning.png" class="chat-head-avatar" onclick="showChatBox();"
+                style="position: fixed; bottom: 20px; right: 20%; z-index: 1030; cursor: pointer;">
         </div>
 
     </main>

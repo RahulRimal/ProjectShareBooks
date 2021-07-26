@@ -143,6 +143,35 @@ function hideChatBox()
 {
   chatBox = document.getElementById('chat-box');
   chatBox.style.height = 0;
+  showChatHead();
 }
+
+function showChatBox()
+{
+  chatBox = document.getElementById('chat-box');
+  chatBox.style.height = '400px';
+  hideChatHead();
+}
+
+function hideChatHead()
+{
+  chatHead = document.getElementById('chat-head');
+  chatHead.classList.remove('d-block');
+  chatHead.classList.add('d-none');
+
+}
+
+function showChatHead()
+{
+  chatHead = document.getElementById('chat-head');
+  chatHead.classList.remove('d-none');
+  chatHead.classList.add('d-block');
+}
+
+$(document).ready(function()
+{
+  hideChatBox();
+  // showChatHead();
+});
 
 // Chatbox ends here

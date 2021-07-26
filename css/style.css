@@ -108,13 +108,6 @@ li
   }  
 }
 
-.chat-box-footer
-{
-  position: fixed;
-  bottom: 0;
-  width: 30%;
-}
-
 #chat-box-input
 {
     width: 100%;
@@ -127,6 +120,14 @@ li
 #chat-box-input:focus
 {
   outline: none;
+}
+
+.chat-head-avatar
+{
+  vertical-align: middle;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
 }
 
 /* Custom Styles Ends here  */
