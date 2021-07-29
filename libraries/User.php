@@ -61,6 +61,7 @@ class User
 
         $row = $this->db->single();
 
+        // if($this->db->rowCount() > 0)
         return $row;
     }
 

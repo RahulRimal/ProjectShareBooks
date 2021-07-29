@@ -59,6 +59,15 @@ class Post
     }
 
 
+    public function getFilteredPosts()
+    {
+        $this->db->query("SELECT * FROM post");
+
+        $rows = $this->db->resultset();
+
+        return $rows;
+    }
+
     public function getPost($pid)
     {
         $this->db->query("SELECT * FROM post WHERE id = :postId ");
@@ -82,6 +91,37 @@ class Post
         $row = $this->db->single();
 
         return $row->userId;
+    }
+
+
+
+    public function reply($data)
+    {
+        $this->db->query("INSERT INTO replies(postId, userId, body)
+                         VALUES(:postId, :userId, :body)
+                        ");
+            
+        $this->db->bind(':postId', $data['postId']);
+        $this->db->bind(':userId', $data['userId']);
+        $this->db->bind(':body', $data['body']);
+
+        if($this->db->execute())
+            return true;
+        else
+            return false;
+
+    }
+
+
+    public function getReplies($postId)
+    {
+        $this->db->query('SELECT * FROM replies WHERE postId = :postId');
+        $this->db->bind(':postId', $postId);
+
+        $rows = $this->db->resultset();
+
+        return $rows;
+
     }
 
 

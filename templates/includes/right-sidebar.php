@@ -5,12 +5,12 @@
     <?php include('includes/profile-card.php');?>
     <!--profile card ends here  -->
 
-    <div class="sidebar-heading bg-white rounded m-0 pt-3 px-3">
-        <a href="#" style="background-color: var(--primary-color); color: white;"
+    <!-- <div class="sidebar-heading bg-white rounded m-0 pt-3 px-3">
+        <a href="add.php" style="background-color: var(--primary-color); color: white;"
             class="right-sidebar-add-topic d-inline-block w-100 text-center rounded">
             Add new post
         </a>
-    </div>
+    </div> -->
     <div class="sidebar-body bg-white rounded p-3">
 
         <?php if(!isLoggedIn()):?>
@@ -30,6 +30,12 @@
             </div>
         </div>
         <?php else:?>
+        <div class="sidebar-heading bg-white rounded m-0 py-3">
+            <a href="add.php?uid=<?php echo $userInfo->id;?>" style="background-color: var(--primary-color); color: white;"
+                class="right-sidebar-add-topic d-inline-block w-100 text-center rounded">
+                Add new post
+            </a>
+        </div>
         <div class="sidebar-item mb-3">
             <div class="logout-form">
                 <form action="logout.php" method="post">

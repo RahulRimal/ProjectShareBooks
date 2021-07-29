@@ -18,11 +18,15 @@ if(isLoggedIn())
 
     $template->userInfo = $user->getUserInfo($uid);
 
-
-    $template->allPosts = $post->getAllPosts();
+    $template->allPosts = $post->getFilteredPosts();
 
     $template->sellingPostsCount = $post->getSellingPostsCount($uid);
     $template->buyingPostsCount = $post->getBuyingPostsCount($uid);
+}
+
+else
+{
+    $template->allPosts = $post->getAllPosts();
 }
 
 

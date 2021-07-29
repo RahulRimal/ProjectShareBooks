@@ -1,6 +1,5 @@
 <?php include('includes/header.php');?>
 
-
 <main class="my-2">
 
     <!-- main wide content starts here  -->
@@ -47,8 +46,9 @@
                                 <div class="post-desc">
                                     <p><?php echo $post->description;?></p>
                                 </div>
-                                <div class="book-price bg-success me-5 text-center">
-                                    <h6" class="font-italic text-white">Total Price: <strong>Rs. <?php echo $post->price;?></strong></h6>
+                                <div class="book-price bg-success text-center">
+                                    <h6" class="font-italic text-white">Total Price: <strong>Rs.
+                                            <?php echo $post->price;?></strong></h6>
                                 </div>
                             </div>
                         </div>
@@ -75,6 +75,73 @@
                             <div class="comments-header d-flex justify-content-around align-items-center">
                                 <p class="h6">Comments</p>
                                 <hr class="w-75" style="color: var(--primary-color);">
+                            </div>
+                            <div class="comments-body rounded p-3" style="background-color: var(--primary-bg-color);">
+
+                                <?php foreach($postComments as $postComment):?>
+                                <!-- Comment Starts here  -->
+                                <!-- <div class="post-comment d-flex justify-content-between bg-white p-3 mb-3"
+                                    style="border-radius: 25px;">
+                                    <div class="comment-profile mx-4">
+                                        <a href="#">
+                                            <img src="<?php echo BASE_URI;?>/images/<?php echo $userInfo->picture;?>"
+                                                class="circle-avatar" style="height: 50px; width: 50px;">
+                                        </a>
+                                        <a href="#" class="user-name font-italic h6"
+                                            style="color: var(--primary-color);">
+                                            <?php echo ("{$userInfo->firstName} "); echo $userInfo->lastName;?></a>
+                                    </div>
+                                    <div class="comment-text">
+                                        <p><?php echo $postComment->body;?></p>
+                                    </div>
+                                </div> -->
+                                <!-- Comment Ends here  -->
+
+                                <!-- Comment Starts here  -->
+                                <div class="post-comment bg-white p-3 mb-3" style="border-radius: 25px;">
+                                    <div class="row">
+                                        <div class="comment-profile col-3 mx-4">
+                                            <a href="#">
+                                                <img src="<?php echo BASE_URI;?>/images/<?php echo $userInfo->picture;?>"
+                                                    class="circle-avatar" style="height: 50px; width: 50px;">
+                                            </a>
+                                            <a href="#" class="user-name font-italic h6"
+                                                style="color: var(--primary-color);">
+                                                <?php echo ("{$userInfo->firstName} "); echo $userInfo->lastName;?></a>
+                                        </div>
+                                        <div class="comment-text col-8">
+                                            <p><?php echo $postComment->body;?></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Comment Ends here  -->
+
+                                <?php endforeach;?>
+
+                                <div class="comment-footer">
+                                    <div class="comment-reply">
+                                        <?php if(isLoggedIn()):?>
+                                            <p class="h5">Add your comment</p>
+                                        <form role="form" method="post" action="post.php?id=<?php echo $post->id; ?>">
+                                            <div class="form-group">
+                                                <textarea id="reply" rows="10" cols="80" class="form-control"
+                                                    name="comment-body"></textarea>
+                                                <script>
+                                                CKEDITOR.replace('reply');
+                                                </script>
+                                            </div>
+                                            <div class="reply-button text-end">
+                                                <button name="doReply" type="submit" class="btn w-25"
+                                                    style="background-color: var(--primary-color);">Submit</button>
+                                            </div>
+                                        </form>
+                                        <?php else:?>
+                                        <p style="color: var(--primary-color);" class="h4 text-center">Please <a
+                                                class="text-primary" href="#">Log In</a> to Reply to this post</p>
+                                        <?php endif;?>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
 

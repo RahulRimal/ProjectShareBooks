@@ -1,6 +1,9 @@
 <?php include('core/init.php'); ?>
 
 <?php
+
+// $currentUrl = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+
 if(isset($_POST['doLogin']))
 {
     $userEmail = $_POST['loginEmail'];

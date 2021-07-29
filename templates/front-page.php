@@ -16,12 +16,13 @@
         <div class="main-content container mt-5">
             <div class="row">
                 <!-- Left sidebar starts here  -->
-                <div class="left-sidebar d-flex flex-column justify-content-start text-center bg-white p-3 col-lg-3" style="height: fit-content;">
+                <?php if(isLoggedIn()):?>
+                <div class="left-sidebar d-flex flex-column justify-content-start text-center bg-white p-3 mb-5 col-lg-3" style="height: fit-content;">
                     <?php if(isLoggedIn()):?>
                     <div class=" sidebar-item user-profile-info">
                         <div class="pic-name text-center">
                             <img class="circle-avatar p-1 mt-5"
-                                src="<?php echo $userInfo->picture;?>"
+                                src="<?php echo BASE_URI;?>images/<?php echo $userInfo->picture;?>"
                                 alt="">
                             <div class="user-info">
                                 <h6 class="user-name"><em><?php echo $userInfo->firstName;?> <?php echo $userInfo->lastName;?></em></h6>
@@ -46,11 +47,13 @@
                     <?php endif;?>
                 </div>
 
+                <?php endif;?>
+
                 <!-- Left sidebar ends here  -->
 
                 <!-- main center content starts here  -->
 
-                <div class="main-center-content col-lg-6">
+                <div class="main-center-content <?php if(isLoggedIn()) echo('col-lg-6'); else echo('col-lg-9');?>">
                     <div class="user-preferred-posts">
                     <?php foreach($allPosts as $post):?>
                     <?php if($post->postType == 0):?>

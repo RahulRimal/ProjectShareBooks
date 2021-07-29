@@ -94,7 +94,7 @@ $(document).ready(function () {
     auto: true,
     loop: true,
     slideEndAnimation: true,
-    pause: 2000,
+    pause: 5000,
 
     keyPress: false,
     controls: true,

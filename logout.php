@@ -1,7 +1,5 @@
 <?php require('core/init.php');?>
 
-
-
 <?php
 
     if(isset($_POST['doLogout']))

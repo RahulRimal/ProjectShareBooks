@@ -6,7 +6,7 @@
                 <div class="sidebar-item">
                     <div class="user-info d-flex justify-content-between align-items-center">
                         <div class="user-profile-pic">
-                            <img class="circle-avatar" src="<?php echo $userInfo->picture;?>" alt="">
+                            <img style="height: 60px; width: 60px;" class="circle-avatar" src="<?php echo BASE_URI;?>images/<?php echo $userInfo->picture;?>">
                         </div>
                         <div class="user-info" style="width: 65%;">
                             <h6 class="user-name"><em><?php echo $userInfo->firstName;?>

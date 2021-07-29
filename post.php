@@ -10,6 +10,7 @@
 
     $postId = isset($_GET['post']) ? $_GET['post'] : null;
 
+
     if($postId != null)
     {
         $uid = $post->userIdFromPost($postId);
@@ -22,6 +23,8 @@
 
         $template->post = $post->getPost($postId);
 
+        $template->postComments = $post->getReplies($postId);
+
     }
     else
     {
@@ -30,7 +33,39 @@
 
 
 
-    
+    if(isset($_POST['doReply']))
+    {
+
+        $data = array();
+        $data['postId'] = $_GET['post'];
+        $data['body'] = $_POST['comment-body'];
+        $data['userId'] = $post->userIdFromPost($postId);
+
+        $validate = new Validator();
+
+        // Required Fields
+
+        $field_array = array('body');
+
+        if($validate->isRequired($field_array))
+        {
+            die($post->reply($data));
+            if($post->reply($data))
+            {
+                // redirect('post.php?post='.$postId, 'Your reply has been posted.', 'success');
+                redirect('index.php', 'Your reply has been posted.', 'success');
+            }
+            else
+            {
+                // redirect('post.php?post='.$postId, 'Something went wrong, Please try again.', 'error');
+                redirect('index.php', 'Something went wrong, Please try again.', 'error');
+            }
+        }
+        else
+            // redirect('post.php?post='.$postId, 'Cannot reply a blank comment', 'error');
+            redirect('index.php', 'Cannot reply a blank comment', 'error');
+
+    }
 
     echo $template;
 
