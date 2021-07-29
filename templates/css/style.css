@@ -79,7 +79,7 @@ li
   border-right: 2px solid grey;
 }
 
-.sidebar-item:hover, .sidebar-item a:hover
+.sidebar-item-red:hover
 {
   color: var(--primary-color);
 }
@@ -173,16 +173,11 @@ li
 
 /* Narrow Main content starts here  */
 
-/* .user-preferred-posts .user-post
-{
-
-} */
-
 .user-preferred-posts .post-selling-tag
 {
   position: absolute;
   top: -10px;
-  right: 30px;
+  right: 100px;
   background-color: var(--primary-color);
   color: white;
   border-radius: 20px;
@@ -192,7 +187,7 @@ li
 {
   position: absolute;
   top: -10px;
-  right: 30px;
+  right: 100px;
   background-color: #69DE40;
   color: white;
   border-radius: 20px;
@@ -271,8 +266,6 @@ li
 
 /* User All Posts Page Starts here */
 
-/* div.main-center-content.me-auto.col-lg-8 > div > div > div.post-title > a */
-
 .user-all-posts .post-selling-tag
 {
   position: absolute;
@@ -293,7 +286,7 @@ li
   border-radius: 20px;
 }
 
-.user-all-posts .user-post .post-title a
+.user-preferred-posts .user-post .post-title a, .user-all-posts .user-post .post-title a
 {
   color: var(--primary-color);
 }

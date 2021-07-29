@@ -82,7 +82,6 @@
 
                 </div>
 
-
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -91,12 +90,12 @@
                 <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
                     <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active d-flex flex-column align-items-center" href="#"> <i
+                            <a class="nav-link active d-flex flex-column align-items-center" href="<?php echo BASE_URI;?>"><i
                                     class="fa fa-home" aria-hidden="true"></i>Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link d-flex flex-column align-items-center" href="#"> <i
-                                    class="fa fa-shopping-cart" aria-hidden="true"></i>My Store</a>
+                            <a class="nav-link d-flex flex-column align-items-center" href="all-posts.php?user=<?php echo $_SESSION['user_id'];?>"> <i
+                                    class="fa fa-shopping-cart" aria-hidden="true"></i>My Books</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link d-flex flex-column align-items-center" href="#"> <i
@@ -128,6 +127,7 @@
                         <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
                     </form>
                     <ul class="navbar-nav mb-2 mt-2 mb-lg-0">
+                        <?php if(!isLoggedIn()):?>
                         <div class="login-signup d-flex align-items-center">
                             <li class="nav-item">
                                 <a class="nav-link" href="#">LogIn</a>
@@ -136,6 +136,7 @@
                                 <a href="#" class="btn btn-light">SignUp</a>
                             </li>
                         </div>
+                        <?php else:?>
                         <div class="user-profile d-none d-md-flex">
                             <div class="nav-item dropdown d-flex align-items-center">
                                 <img class="nav-link circle-avatar-icon p-1"
@@ -156,12 +157,16 @@
                             </div>
 
                         </div>
+                        <?php endif;?>
                 </div>
 
                 </ul>
             </div>
             </div>
         </nav>
+
+        <?php displayMessage();?>
+
     </header>
 
     <!-- Header ends here -->
@@ -192,4 +197,3 @@
     </section> -->
 
     <!-- Hero ends here -->
-

@@ -91,7 +91,7 @@ $(document).ready(function () {
     easing: "linear", //'for jquery animation',////
 
     speed: 400, //ms'
-    auto: false,
+    auto: true,
     loop: true,
     slideEndAnimation: true,
     pause: 2000,
@@ -136,8 +136,30 @@ $(document).ready(function () {
 // LightSlider Section for add-post-pics ends here
 
 
+// Alert box show/hide starts here 
 
-// Chatbox Starts here 
+$(document).ready(function(){
+  setTimeout(function(){
+    alert = document.getElementsByClassName('alert');
+    alert[0].classList.add('d-none');
+  }, 2000);
+});
+
+// Alert box show/hide ends here 
+
+
+
+// Chatbox Starts here
+
+function showChatSystem()
+{
+  chatSystem = document.getElementById('chat-system');
+
+  console.log(chatSystem);
+  chatSystem.classList.remove('d-none');
+  chatSystem.classList.add('d-block');
+  showChatBox();
+}
 
 function hideChatBox()
 {
@@ -171,7 +193,6 @@ function showChatHead()
 $(document).ready(function()
 {
   hideChatBox();
-  // showChatHead();
 });
 
 // Chatbox ends here

@@ -5,7 +5,7 @@
 function redirect($page = FALSE, $message = NULL, $message_type = NULL) {
 	if (is_string ($page)) {
 		$location = $page;
-	} else {
+	} else{
 		$location = $_SERVER ['SCRIPT_NAME'];
 	}
 
@@ -39,9 +39,9 @@ function displayMessage(){
 			$message_type = $_SESSION['message_type'];
 			//Create Output
 			if ($message_type == 'error') {
-				echo '<div class="alert alert-danger">' . $message . '</div>';
+				echo '<div class="alert alert-danger text-center">' . $message . '</div>';
 			} else {
-				echo '<div class="alert alert-success">' . $message . '</div>';
+				echo '<div class="alert alert-success text-center">' . $message . '</div>';
 			}
 		}
 		//Unset Message
