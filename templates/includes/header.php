@@ -9,17 +9,17 @@
     <title>ShareLearning</title>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="<?php echo BASE_URI;?>templates/css/boot/bootstrap.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="<?php echo BASE_URI; ?>templates/css/boot/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
     <!-- Custom Css -->
-    <link rel="stylesheet" href="<?php echo BASE_URI;?>templates/css/style.css">
+    <link rel="stylesheet" href="<?php echo BASE_URI; ?>templates/css/style.css">
 
     <!-- lightslider css -->
-    <link rel="stylesheet" href="<?php echo BASE_URI;?>templates/css/lightslider.css">
+    <link rel="stylesheet" href="<?php echo BASE_URI; ?>templates/css/lightslider.css">
 
     <!-- Ckeditor Js -->
-    <script src="<?php echo BASE_URI;?>templates/js/ckeditor/ckeditor.js"></script>
+    <script src="<?php echo BASE_URI; ?>templates/js/ckeditor/ckeditor.js"></script>
 
 </head>
 
@@ -55,8 +55,7 @@
                     <a class="navbar-brand" href="#">ShareLearning</a>
                     <form class="form-inline d-none d-md-flex" role="form">
                         <div class="input-group">
-                            <input type="text" class="form-control shadow-none" placeholder="Search"
-                                aria-label="SearchHere" aria-describedby="basic-addon2">
+                            <input type="text" class="form-control shadow-none" placeholder="Search" aria-label="SearchHere" aria-describedby="basic-addon2">
                             <div class="input-group-append">
                                 <button class="btn btn-light" type="button">
                                     <i class="fa fa-search text-danger" aria-hidden="true"></i>
@@ -67,57 +66,46 @@
 
                 </div>
 
-                <?php if(isLoggedIn()):?>
-                <div class="user-profile d-flex d-md-none">
-                    <div class="nav-item dropdown d-flex align-items-center">
-                        <img class="nav-link circle-avatar-icon p-1"
-                            src="https://cdn.pixabay.com/photo/2017/12/31/15/56/portrait-3052641_960_720.jpg" alt="">
-                        <a class="nav-link active dropdown-toggle d-flex align-items-center text-light p-0" href="#"
-                            id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Rahul
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">CSIT</a></li>
-                            <li><a class="dropdown-item" href="#">BCA</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">BIT</a></li>
-                        </ul>
+                <?php if (isLoggedIn()) : ?>
+                    <div class="user-profile d-flex d-md-none">
+                        <div class="nav-item dropdown d-flex align-items-center">
+                            <img class="nav-link circle-avatar-icon p-1" src="https://cdn.pixabay.com/photo/2017/12/31/15/56/portrait-3052641_960_720.jpg" alt="">
+                            <a class="nav-link active dropdown-toggle d-flex align-items-center text-light p-0" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Rahul
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">CSIT</a></li>
+                                <li><a class="dropdown-item" href="#">BCA</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">BIT</a></li>
+                            </ul>
+                        </div>
+
                     </div>
 
-                </div>
+                <?php endif; ?>
 
-                <?php endif;?>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
                     <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active d-flex flex-column align-items-center"
-                                href="<?php echo BASE_URI;?>"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+                            <a class="nav-link active d-flex flex-column align-items-center" href="<?php echo BASE_URI; ?>"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link d-flex flex-column align-items-center"
-                                href="all-posts.php?user=<?php echo $_SESSION['user_id'];?>"> <i
-                                    class="fa fa-shopping-cart" aria-hidden="true"></i>My Books</a>
+                            <a class="nav-link d-flex flex-column align-items-center" href="all-posts.php?user=<?php echo $_SESSION['user_id']; ?>"> <i class="fa fa-shopping-cart" aria-hidden="true"></i>My Books</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link d-flex flex-column align-items-center" href="#"> <i
-                                    class="fas fa-comment-dots"></i>Messages</a>
+                            <a class="nav-link d-flex flex-column align-items-center" href="#"> <i class="fas fa-comment-dots"></i>Messages</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link d-flex flex-column align-items-center" href="#"><i
-                                    class="fas fa-bolt"></i>Notifications</a>
+                            <a class="nav-link d-flex flex-column align-items-center" href="#"><i class="fas fa-bolt"></i>Notifications</a>
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle d-flex flex-column align-items-center" href="#"
-                                id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i
-                                    class="fas fa-book-open"></i>Classwise
+                            <a class="nav-link dropdown-toggle d-flex flex-column align-items-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-book-open"></i>Classwise
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="#">CSIT</a></li>
@@ -130,53 +118,48 @@
                         </li>
                     </ul>
                     <form class="form-inline d-flex d-md-none align-items-center my-2 my-lg-0">
-                        <input style="height: 40px;" class="form-control mr-sm-2" type="search" placeholder="Search"
-                            aria-label="Search">
+                        <input style="height: 40px;" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
                     </form>
                     <ul class="navbar-nav mb-2 mt-2 mb-lg-0">
-                        <?php if(!isLoggedIn()):?>
-                        <div class="login-signup d-flex align-items-center">
-                            <li class="nav-item">
-                                <a class="nav-link me-2" href="#">LogIn</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="btn btn-light">SignUp</a>
-                            </li>
-                        </div>
-                        <?php else:?>
-                        <div class="logout-form d-block d-md-none">
-                            <form action="logout.php" method="post">
-                                <button type="submit" name="doLogout" class="btn btn-primary w-100 h6">LogOut</button>
-                            </form>
-                        </div>
-                        <div class="user-profile d-none d-md-flex">
-                            <div class="nav-item dropdown d-flex align-items-center">
-                                <img class="nav-link circle-avatar-icon p-1"
-                                    src="https://cdn.pixabay.com/photo/2017/12/31/15/56/portrait-3052641_960_720.jpg"
-                                    alt="">
-                                <a class="nav-link active dropdown-toggle d-flex align-items-center p-0" href="#"
-                                    id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">Rahul
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#">CSIT</a></li>
-                                    <li><a class="dropdown-item" href="#">BCA</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">BIT</a></li>
-                                </ul>
+                        <?php if (!isLoggedIn()) : ?>
+                            <div class="login-signup d-flex align-items-center">
+                                <li class="nav-item">
+                                    <a class="nav-link me-2" href="#">LogIn</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="btn btn-light">SignUp</a>
+                                </li>
                             </div>
-                        </div>
-                        <?php endif;?>
+                        <?php else : ?>
+                            <div class="logout-form d-block d-md-none">
+                                <form action="logout.php" method="post">
+                                    <button type="submit" name="doLogout" class="btn btn-primary w-100 h6">LogOut</button>
+                                </form>
+                            </div>
+                            <div class="user-profile d-none d-md-flex">
+                                <div class="nav-item dropdown d-flex align-items-center">
+                                    <img class="nav-link circle-avatar-icon p-1" src="https://cdn.pixabay.com/photo/2017/12/31/15/56/portrait-3052641_960_720.jpg" alt="">
+                                    <a class="nav-link active dropdown-toggle d-flex align-items-center p-0" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Rahul
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="#">CSIT</a></li>
+                                        <li><a class="dropdown-item" href="#">BCA</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">BIT</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        <?php endif; ?>
                 </div>
                 </ul>
             </div>
             </div>
         </nav>
 
-        <?php displayMessage();?>
+        <?php displayMessage(); ?>
 
     </header>
 
